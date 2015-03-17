@@ -2,33 +2,25 @@
 
 int main(){
 
+	int a, b;
 	int i, j, k;
 	int v, e;						// v - wierzchołki, e - krawędzie,
 	int graf[10][10];
-	int ciag[10];					// ciag stopni,
-
-	// zerowanie macierzy
-	for (i=0; i<10; i++) {
-		for (j=0; j<10; j++) {
-			graf[i][j] = 0; } 
-	}
-
-	// zerowanie tabeli
-	for (k=0; k<10; k++) {
-		ciag[k] = 0; }
-
+	
 	printf("Proszę podać ilość wierzchołków.\n");
 	scanf("%d", &v);
 	
 	printf("Proszę podać ilość krawędzi\n");
 	scanf("%d", &e);
 
+	// zerowanie macierzy
+	for (i=0; i<v; i++) {
+		for (j=0; j<v; j++) {
+			graf[i][j] = 0; } }
 
-	// wyswietlanie na ekranie
-	for (i=0; i<10; i++) {
-		for (j=0; j<10; j++) {
-			printf("%d,", graf[i][j]); }
-		printf("\b \n");
+	for (k=1; k<v; k++) {
+		printf("Prosże wprowadzić wierzchołki dla krawędzi numer %d\n", k);
+		scanf("%d %d", &a, &b);
 	}
 
 return 0;
