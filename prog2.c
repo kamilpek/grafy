@@ -17,7 +17,7 @@ int main(){
 	int v, e;								// liczba wierzchołków i krawędzi
 	int i, j, x, y;							// operatory pętli for
 	int start = 0, stop = 0, status = 0;	// zmienne z duzego fora
-	int maksim = 0, stopien = 0, pa = 0;	// zmienne z malego fora
+	int max = 0, degree = 0, pa = 0;		// zmienne z malego fora
 	
 	printf("Proszę podać liczbę wierzchołków.\n");
 	scanf("%d", &v);
@@ -75,19 +75,19 @@ int main(){
 	// stopien wierzcholka
 	for(x=0; x<v; x++){    
 		for(y=0; y<=v-1; y++){       		   
-			stopien += graf[x][y];
-			if (stopien%2 == 0){
+			degree += graf[x][y];
+			if (degree%2 == 0){
                   pa+=1;
                 } }                         
-		printf("\t Wierzcholek o numerze %d ma stopien %d. \n", x+1, stopien);
-		if ( stopien > maksim ){ 
-			maksim = stopien;
+		printf("\t Wierzcholek o numerze %d ma stopien %d. \n", x+1, degree);
+		if ( degree > max ){ 
+			max = degree;
 		}
-       		stopien=0; 
+       		degree=0; 
 	}	// koniec malego fora
 	
 	printf(" \n");
-	printf("\t Stopien grafu wynosi: %d\n", maksim);
+	printf("\t Stopien grafu wynosi: %d\n", max);	// Stopien grafu
 	
 	return 0;
 	
