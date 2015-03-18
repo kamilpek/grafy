@@ -1,7 +1,13 @@
 /*
 * Algorytmiczna Teroia Grafow.
+* Implementacja grafu w komputerze.
 * (C) Kamil Pek 2015
 * http://github.com/kamilpek/grafy 
+*/
+
+/*
+ * Duzy for - wprowadzanie grafu.
+ * Maly for - obliczanie stopnia grafu.
 */
 
 #include <stdio.h>
@@ -64,6 +70,8 @@ int main(){
 	
 	}	// koniec duzego fora
 	
+	printf(" \n");	// linia przerwy
+	
 	// stopien wierzcholka
 	for(x=0; x<v; x++){    
 		for(y=0; y<=v-1; y++){       		   
@@ -71,11 +79,12 @@ int main(){
 			if (stopien%2 == 0){
                   pa+=1;
                 } }                         
-		printf("Wierzcholek o numerze %d ma stopien %d.\n", x+1, stopien);
+		printf("\t Wierzcholek o numerze %d ma stopien %d. \n", x+1, stopien);
 		if ( stopien > maksim ){ 
 			maksim = stopien;
 		}
-       		stopien=0; }
+       		stopien=0; 
+	}	// koniec malego fora
 	
 	return 0;
 	
