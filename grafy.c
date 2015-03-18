@@ -14,7 +14,7 @@ int tablica[w][w];
     for(y=0; y<w; y++){
         tablica[x][y] = 0;
         }
-    } 
+    }           
           
     for(x=0; x<k; x++){
      do{
