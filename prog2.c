@@ -86,6 +86,9 @@ int main(){
        		stopien=0; 
 	}	// koniec malego fora
 	
+	printf(" \n");
+	printf("\t Stopien grafu wynosi: %d\n", maksim);
+	
 	return 0;
 	
 }
