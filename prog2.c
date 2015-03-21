@@ -19,10 +19,10 @@ int main(){
 	int start = 0, stop = 0, status = 0;	// zmienne z duzego fora
 	int max = 0, degree = 0;				// zmienne z malego fora
 	
-	printf("Proszę podać liczbę wierzchołków.\n");
+	printf("Proszę podać liczbę wierzchołków: \t");
 	scanf("%d", &v);
 	
-	printf("Proszę podać liczbę krawędzi.\n");
+	printf("Proszę podać liczbę krawędzi: \t \t");
 	scanf("%d", &e);
 	
 	int graf[v][v];
