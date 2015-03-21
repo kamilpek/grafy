@@ -39,11 +39,7 @@ int main(){
 			printf("Prosze wprowadzic pierwszy wierzcholek krawedzi %d: \t", x+1);
 			scanf("%d",&start);
 			printf("Prosze wprowadzic drugi wierzcholek krawedzi %d: \t", x+1);
-			scanf("%d",&stop); 
-             
-            if (start == stop) { 
-               	printf("Error!! Poczatkowy i koncowy wierzcholek nie moga byc takie same.\n");
-            	status=0;	}
+			scanf("%d",&stop);            
                	
             if (start < 1 || stop < 1){ 
                	printf("Error!! Indeks Wierzcholkow nie moze byc mniejszy od 1.\n");
@@ -60,8 +56,8 @@ int main(){
 	return main();	}
 	
 	// wczytywanie do macierzy dwuwymiarowej 'graf'
-	graf[start-1][stop-1]=1;
-	graf[stop-1][start-1]=1; 
+	graf[start-1][stop-1] += 1;
+	graf[stop-1][start-1] += 1; 
 	
 	}	// koniec duzego fora
 	
