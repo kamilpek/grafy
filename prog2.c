@@ -2,6 +2,7 @@
 * Algorytmiczna Teroia Grafow.
 * Implementacja grafu w komputerze.
 * (C)2015 Kamil Pek
+* Ver. 2.0
 * http://github.com/kamilpek/grafy 
 */
 
