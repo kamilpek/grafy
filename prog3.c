@@ -2,7 +2,7 @@
 * Algorytmiczna Teroia Grafow.
 * Implementacja grafu w komputerze.
 * (C)2015 Kamil Pek
-* Ver. 3.3 beta
+* Ver. 3.4 (final release)
 * http://github.com/kamilpek/grafy 
 */
 
@@ -19,8 +19,8 @@
 	int start = 0, stop = 0, status = 0;	// zmienne z duzego fora
 	int max = 0, degree = 0;				// zmienne z malego fora
 	int wiersz = 0, kolumna = 0;			// zmienne z trzeciego fora
-	int pa;
-	int graf[1][1];
+	int pa=0, ne=0;								// zmienne sprawdzajace cykl eulera
+	int graf[1][1];							// deklaracja macierzy sasiedztwa grafu
 	
 int main(){
 
@@ -74,6 +74,8 @@ int main(){
 			degree += graf[x][y]; }
 		if(degree%2==0){
 			pa+=1; }
+		else {
+			ne=1; }			
 		                        
 		printf("\t Wierzcholek o numerze %d ma stopien %d. \n", x+1, degree);
 		if ( degree > max ){ 
@@ -91,7 +93,7 @@ int main(){
 		printf("\t %d",graf[x][y]);} 
         printf("\t %d\n",graf[x][y]);}
 		
-	//Trzeci for
+//Trzeci for
 	for(x=0;x<v;x++){    
 		for(y=0;y<=v-1;y++){
 			if(v%2==0){
@@ -107,16 +109,16 @@ int main(){
 			kolumna=1; }
 			}
 		} 
-	}
+	}	//koniec trzeciego fora
 	
 	printf(" \n");
 	
-//	printf("pa= %d, max= %d, wiersz= %d, kolumna= %d.\n", pa, max, wiersz, kolumna); 
+//	printf("pa= %d, max= %d, wiersz= %d, kolumna= %d, ne= %d.\n", pa, max, wiersz, kolumna, ne); 
 	
 	if(v>e){
 		printf("\t Niestety. Graf nieeulerowski. \n"); }
 		else {
-			if(pa>=1 & max%2==0 & wiersz==kolumna){
+			if((pa>=1) & (max%2==0) & (wiersz==kolumna) & (ne==0)){
 			printf("\t Graf eulerowski!! \n"); }
 				else{
 					printf("\t Niestety. Graf nieeulerowski.\n"); }
